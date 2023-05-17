@@ -1,4 +1,4 @@
-# Front-end Projects
+# Frontend Projects
 
 Simple static landing pages using HTML, CSS and Javascript
 
