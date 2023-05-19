@@ -24,15 +24,18 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 
 ### Screenshot
-<div style="text-align: center">
+<div style="text-align: center; font-weight: bold">
 
-#### Large Devices
+Large Devices
+
 ![](./assets/readme/large-devices.png)
 
-#### Medium Sized Devices**
+Medium Sized Devices
+
 ![](./assets/readme/medium-size-devices.png)
 
-#### Small Devices
+Small Devices
+
 ![](./assets/readme/mobile-devices.png)
 
 </div>
