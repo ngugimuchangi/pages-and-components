@@ -96,7 +96,7 @@ nav li {
 header .secondary-nav-options {
   display: none;
 }
-.header-nav {
+#header-nav {
   grid-area: nav;
   justify-self: end;
   position: relative;
@@ -202,7 +202,7 @@ span#intro-message {
   .login-signup {
     flex-direction: row;
   }
-  .header-nav {
+  #header-nav {
     align-self: start;
   }
   .header-nav-items {
@@ -452,68 +452,47 @@ footer .logo {
   margin-bottom: 48px;
 }
 
-.footer-nav .main-nav {
+#footer-nav .main-nav {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
 }
-.footer-nav .main-nav-options {
+#footer-nav .main-nav-options {
   margin-top: 48px;
   font-weight: 500;
   cursor: text;
 }
-.footer-nav .secondary-nav-options {
+#footer-nav .secondary-nav-options {
   margin-top: 16px;
   font-weight: 400;
   color: var(--grayish-blue);
 }
-.attribution {
-  margin-top: 48px;
-}
-.attribution a {
-  color: var(--white);
-  text-decoration: none;
-}
 
-.attribution span {
-  display: block;
-}
 /* Medium screens */
 @media only screen and (min-width: 768px) {
   footer {
-    padding: 64px 24px 32px;
+    padding: 64px 24px 128px;
     display: grid;
     grid-template-columns: 0.25fr, 0.5fr, repeat(3, 1fr) 0.25fr;
-    grid-template-rows: 1fr 0.1fr;
-    grid-template-areas: '. logo nav nav nav .' 'attr attr attr attr attr attr';
+    grid-template-rows: 1fr;
+    grid-template-areas: '. logo nav nav nav .';
     align-items: start;
   }
 
   .logo {
     grid-area: logo;
   }
-  .footer-nav {
+  #footer-nav {
     grid-area: nav;
   }
 
-  .footer-nav .main-nav {
+  #footer-nav .main-nav {
     width: 100%;
     flex-direction: row;
     align-items: start;
   }
-  .footer-nav .main-nav-options {
+  #footer-nav .main-nav-options {
     margin-top: 0;
-  }
-
-  .attribution {
-    grid-area: attr;
-    align-self: end;
-  }
-  .attribution span {
-    display: inline-block;
-  }
-  .attribution a:hover {
-    color: var(--grayish-blue);
   }
 }
 /* Large screens */
