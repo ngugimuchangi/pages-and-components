@@ -24,9 +24,21 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 
 ### Screenshot
+<div style="text-align: center; font-weight: 900;">
+Large Devices
 
-![](./screenshot.jpg)
+![](./assets/readme/large-devices.png)
 
+Medium Sized Devices
+
+
+
+![](./assets/readme/medium-size-devices.png)
+
+Small Devices
+![](./assets/readme/mobile-devices.png)       ![](./assets/readme/mobile-devices-nav.png)
+
+</div>
 ### Links
 
 - [Solution URL](https://github.com/ngugimuchangi/front-end/tree/master/blogr-landing-page)
