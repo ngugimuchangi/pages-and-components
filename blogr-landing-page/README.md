@@ -36,7 +36,7 @@ Medium Sized Devices
 ![](./assets/readme/medium-size-devices.png)
 
 Small Devices
-![](./assets/readme/mobile-devices.png)       ![](./assets/readme/mobile-devices-nav.png)
+![](./assets/readme/mobile-devices.png)
 
 </div>
 ### Links
