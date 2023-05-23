@@ -39,30 +39,33 @@ document.addEventListener('DOMContentLoaded', () => {
   function isValidDate(day, month, year) {
     const presentTimeError = 'Must be in the past';
     const valueError = 'Must be a valid ';
-    const evenMonths = [4 ,6, 9, 11];
+    const evenMonths = [4, 6, 9, 11];
     const today = new Date();
     const dayValue = parseInt(day.value, 10);
     const monthValue = parseInt(month.value, 10);
     const yearValue = parseInt(year.value, 10);
+    // Days range
     if (dayValue > 31) {
       day.nextElementSibling.innerText = valueError + day.name;
       day.nextElementSibling.classList.add('show');
       day.parentElement.classList.add('invalid');
       return false;
     }
+    // Months range
     if (monthValue > 12) {
       month.nextElementSibling.innerText = valueError + month.name;
       month.nextElementSibling.classList.add('show');
       month.parentElement.classList.add('invalid');
       return false;
     }
+    // Check year range - must be in the present
     if (today.getFullYear() < yearValue) {
       year.nextElementSibling.innerText = presentTimeError;
       year.nextElementSibling.classList.add('show');
       year.parentElement.classList.add('invalid');
       return false;
     }
-
+    // Check days ranges for Feb in leap vs. non-leap years
     if (
       (monthValue === 2 && yearValue % 4 === 0 && dayValue > 29)
       || (monthValue === 2 && yearValue % 4 !== 0 && dayValue > 28)) {
@@ -71,24 +74,28 @@ document.addEventListener('DOMContentLoaded', () => {
       day.parentElement.classList.add('invalid');
       return false;
     }
+    // Check days range for months with 30 days
     if (evenMonths.includes(monthValue) && dayValue > 30) {
       day.nextElementSibling.innerText = valueError + day.name;
       day.nextElementSibling.classList.add('show');
       day.parentElement.classList.add('invalid');
       return false;
     }
+    // Check days range for months with 31 days
     if (!evenMonths.includes(monthValue) && dayValue > 31) {
       day.nextElementSibling.innerText = valueError + day.name;
       day.nextElementSibling.classList.add('show');
       day.parentElement.classList.add('invalid');
       return false;
     }
+    // Check days range for same year but different months
     if (yearValue === today.getFullYear() && monthValue > today.getMonth() + 1) {
       month.nextElementSibling.innerText = presentTimeError;
       month.nextElementSibling.classList.add('show');
       month.parentElement.classList.add('invalid');
       return false;
     }
+    // Check days range for same year, same months but different days
     if (yearValue === today.getFullYear()
     && monthValue === today.getMonth() + 1
     && dayValue > today.getDate()) {
@@ -177,16 +184,19 @@ document.addEventListener('DOMContentLoaded', () => {
     let numberOfDays = today.getDate() - dateOfBirth.getDate();
     // Days not on the same months or on
     // same months but D.O.B not yet reached
-    if (numberOfDays < 0 ){
+    if (numberOfDays < 0) {
       numberOfDays = getRemainDays(dateOfBirth) + today.getDate();
       numberOfMonths -= 1;
     }
+
     // Absolute days value if negative.
     // Necessary for days in the same month.
     numberOfDays = Math.abs(numberOfDays);
-    // M.O. not yet reached
+
+    // Year offset for M.O.B not yet reached
     if (numberOfMonths < 12 && numberOfYears > 0) numberOfYears -= 1;
-    // Offset for months exceeding 12
+
+    // Months offset for months exceeding 12
     if (numberOfMonths >= 12) numberOfMonths -= 12;
 
     yearsRes.innerText = numberOfYears;

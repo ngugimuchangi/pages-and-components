@@ -40,7 +40,7 @@ body * {
   justify-content: space-between;
 }
 
-/* form */
+/* Form */
 form {
   width: 100%;
   height: fit-content;
@@ -113,7 +113,7 @@ input:not(:placeholder-shown):invalid {
   background-color: var(--off-black);
 }
 
-/* results */
+/* Results */
 .res {
   font-style: italic;
   font-weight: 800;
@@ -129,7 +129,7 @@ input:not(:placeholder-shown):invalid {
   color: var(--purple);
 }
 
-/* mobile */
+/* Mobile styles */
 @media screen and (max-width: 648px) {
   #container {
     width: 90vw;
