@@ -22,63 +22,65 @@
     <script src="assets/js/index.js"></script>
   </head>
   <body>
-    <div id="container" role="group">
-      <form name="age-calculator" action="#" novalidate>
-        <div class="form-field">
-          <label for="day">DAY</label>
-          <input
-            type="text"
-            name="day"
-            id="day"
-            placeholder="DD"
-            maxlength="2"
-            required
-            aria-required="true"
-          />
-          <span class="error"></span>
-        </div>
-        <div class="form-field">
-          <label for="month">MONTH</label>
-          <input
-            type="text"
-            name="month"
-            id="month"
-            placeholder="MM"
-            maxlength="2"
-            required
-            aria-required="true"
-          />
-          <span class="error"></span>
-        </div>
-        <div class="form-field">
-          <label for="year">YEAR</label>
-          <input
-            type="text"
-            name="year"
-            id="year"
-            placeholder="YYYY"
-            minlength="4"
-            required
-            aria-required="true"
-          />
-          <span class="error"></span>
-        </div>
-        <button id="submit" type="submit"></button>
-      </form>
-      <div class="res">
-        <div class="res-item">
-          <span id="res-years">--</span>
-          <span>years</span>
-        </div>
-        <div class="res-item">
-          <span id="res-months">--</span>
-          <span>months</span>
-        </div>
-        <div class="res-item">
-          <span id="res-days">--</span>
-          <span>days</span>
+    <main>
+      <div id="container" role="group">
+        <form name="age-calculator" action="#" novalidate>
+          <div class="form-field">
+            <label for="day">DAY</label>
+            <input
+              type="text"
+              name="day"
+              id="day"
+              placeholder="DD"
+              maxlength="2"
+              required
+              aria-required="true"
+            />
+            <span class="error"></span>
+          </div>
+          <div class="form-field">
+            <label for="month">MONTH</label>
+            <input
+              type="text"
+              name="month"
+              id="month"
+              placeholder="MM"
+              maxlength="2"
+              required
+              aria-required="true"
+            />
+            <span class="error"></span>
+          </div>
+          <div class="form-field">
+            <label for="year">YEAR</label>
+            <input
+              type="text"
+              name="year"
+              id="year"
+              placeholder="YYYY"
+              minlength="4"
+              required
+              aria-required="true"
+            />
+            <span class="error"></span>
+          </div>
+          <div id="submit" role="button"></div>
+        </form>
+        <div class="res">
+          <div class="res-item">
+            <span id="res-years">--</span>
+            <span>years</span>
+          </div>
+          <div class="res-item">
+            <span id="res-months">--</span>
+            <span>months</span>
+          </div>
+          <div class="res-item">
+            <span id="res-days">--</span>
+            <span>days</span>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
   </body>
 </html>
