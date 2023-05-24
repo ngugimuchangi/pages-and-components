@@ -155,8 +155,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const evenMonths = [4, 6, 9, 11];
     let remainDays;
 
-    if (month === 2 && year % 4) remainDays = 29 - day;
-    else if (month === 2 && !year % 4) remainDays = 28 - day;
+    if (month === 2 && year % 4) remainDays = 28 - day;
+    else if (month === 2 && !year % 4) remainDays = 29 - day;
     else if (evenMonths.includes(month)) remainDays = 30 - day;
     else remainDays = 31 - day;
     return remainDays;
