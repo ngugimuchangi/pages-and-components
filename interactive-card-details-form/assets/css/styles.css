@@ -156,7 +156,6 @@ input:focus {
     hsl(278, 94%, 30%)
   );
 }
-.invalid,
 .invalid:focus {
   border: 1px solid var(--red);
 }
