@@ -45,7 +45,7 @@ Users should be able to:
 ### Links
 
 - [Solution URL](https://github.com/ngugimuchangi/front-end/tree/master/interactive-card-details-form)
-- [Demo](https://age-calculator-nustesl7y-ngugimuchangi.vercel.app/)
+- [Demo](hhttps://interactive-card-details-form-jet.vercel.app/)
 
 ## Built with
 
