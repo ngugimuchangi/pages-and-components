@@ -1,51 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive card details form</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Interactive card details form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+    <script src="assets/js/index.js"></script>
+  </head>
+  <body>
+    <main>
+      <section class="cards">
+        <div class="card-container">
+          <div class="card card-front">
+            <img
+              id="card-front-logo"
+              src="assets/images/card-logo.svg"
+              alt="card-logo"
+              width="60"
+              height="33"
+            />
+            <div id="card-front-number" default="0000 0000 0000 0000">
+              0000 0000 0000 0000
+            </div>
+            <span id="card-front-cardholder" default="JANE APPLESEED"
+              >JANE APPLESEED</span
+            >
+            <div id="card-front-exp-date">
+              <span id="card-front-exp-month" default="00">00</span>
+              <span>/</span>
+              <span id="card-front-exp-year" default="00">00</span>
+            </div>
+          </div>
+          <div class="card card-back">
+            <span id="card-back-cvc" default="000">000</span>
+          </div>
+        </div>
+      </section>
+      <form>
+        <div id="main-form-section">
+          <label for="cardholder">CARDHOLDER NAME</label>
+          <div class="input-wrapper">
+            <input
+              type="text"
+              name="cardholder"
+              id="cardholder"
+              placeholder="e.g. Jane Appleseed"
+              maxlength="20"
+              required
+            />
+            <span class="error-container cardholder-error-container"></span>
+          </div>
+          <label for="card-number">CARD NUMBER</label>
+          <div class="input-wrapper">
+            <input
+              type="text"
+              name="card-number"
+              id="card-number"
+              placeholder="e.g. 1234 5678 9123 000"
+              maxlength="20"
+              required
+            />
+            <span class="error-container card-number-error-container"></span>
+          </div>
+          <div id="date-cvc">
+            <fieldset id="exp-date">
+              <legend>EXP. DATE (MM/YY)</legend>
+              <label class="hide" for="exp-month">EXPIRING MONTH</label>
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  name="exp-month"
+                  id="exp-month"
+                  placeholder="MM"
+                  minlength="2"
+                  maxlength="2"
+                  required
+                />
+              </div>
+              <label class="hide" for="exp-year">EXPIRING YEAR</label>
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  name="exp-year"
+                  id="exp-year"
+                  placeholder="YY"
+                  minlength="2"
+                  maxlength="2"
+                  required
+                />
+              </div>
+              <span class="error-container exp-date-error-container"></span>
+            </fieldset>
 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
-
-  000
-
-  Cardholder Name
-  e.g. Jane Appleseed
-
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
-
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+            <div id="cvc-container">
+              <label for="cvc">CVC</label>
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  name="cvc"
+                  id="cvc"
+                  placeholder="e.g. 123"
+                  minlength="3"
+                  maxlength="3"
+                  required
+                />
+                <span class="error-container cvc-error-container"></span>
+              </div>
+            </div>
+          </div>
+          <button id="confirm" type="submit">Confirm</button>
+        </div>
+        <div id="complete-section" class="hide">
+          <img
+            src="assets/images/icon-complete.svg"
+            alt="complete"
+            width="80"
+            height="80"
+          />
+          <h1>THANK YOU!</h1>
+          <p>We've added your card details</p>
+          <button id="continue" type="reset">Continue</button>
+        </div>
+      </form>
+    </main>
+  </body>
 </html>
