@@ -3,3 +3,9 @@
     @content;
   }
 }
+
+@mixin portrait {
+  @media screen and (max-width: 968px) and (orientation: landscape) {
+    @content;
+  }
+}

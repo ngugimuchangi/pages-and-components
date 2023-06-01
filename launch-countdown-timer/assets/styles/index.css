@@ -12,7 +12,7 @@
 body {
   font-family: "Red Hat Text", sans-serif;
   font-size: 14px;
-  background: hsl(235, 16%, 14%) url(../images/bg-stars.svg) no-repeat center;
+  background: hsl(235, 16%, 14%) url("../images/bg-stars.svg") no-repeat center;
   background-size: cover;
   color: hsl(0, 0%, 100%);
 }
@@ -30,7 +30,7 @@ a {
 }
 
 header {
-  margin-top: 4rem;
+  margin-top: min(1rem + 10vh, 10rem);
   min-width: 375px;
 }
 header h1 {
@@ -53,7 +53,7 @@ header h1 {
   padding: 0 1rem;
   min-width: 375px;
   grid-template-columns: repeat(4, minmax(70px, 120px));
-  grid-template-rows: minmax(120px, 200px);
+  grid-template-rows: minmax(70px, 200px);
   gap: 1rem;
   place-items: center stretch;
   place-content: center;
@@ -65,7 +65,7 @@ header h1 {
 .unit-wrapper .unit {
   height: 100px;
   color: hsl(345, 95%, 68%);
-  font-size: clamp(42px, 14px + 5vw, 45.5px);
+  font-size: clamp(42px, 14px + 5vw, 49px);
   position: relative;
   user-select: none;
 }
@@ -93,6 +93,11 @@ header h1 {
   position: relative;
   top: 35%;
 }
+@media screen and (min-width: 768px) {
+  .unit-wrapper .unit .time-top .content-top {
+    top: 28%;
+  }
+}
 .unit-wrapper .unit .time-bottom {
   margin-top: 1px;
   overflow: hidden;
@@ -112,7 +117,12 @@ header h1 {
 }
 .unit-wrapper .unit .time-bottom .content-bottom {
   position: relative;
-  top: -66%;
+  top: -67%;
+}
+@media screen and (min-width: 768px) {
+  .unit-wrapper .unit .time-bottom .content-bottom {
+    top: -74%;
+  }
 }
 .unit-wrapper .time-label {
   color: hsl(237, 18%, 59%);
@@ -130,7 +140,13 @@ footer {
 }
 @media screen and (min-width: 768px) {
   footer {
-    height: 300px;
+    height: 260px;
+  }
+}
+@media screen and (max-width: 968px) and (orientation: landscape) {
+  footer {
+    position: static;
+    margin-top: 4rem;
   }
 }
 footer .container {

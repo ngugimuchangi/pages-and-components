@@ -15,7 +15,7 @@ body {
   font-family: 'Red Hat Text', sans-serif;
   font-size: 14px;
   background: map.get(variables.$colors, 'very-dark-blue')
-    url(../images/bg-stars.svg) no-repeat center;
+    url('../images/bg-stars.svg') no-repeat center;
   background-size: cover;
   color: map.get(variables.$colors, 'white');
 }

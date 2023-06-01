@@ -13,7 +13,7 @@
 
 // HEADER
 header {
-  margin-top: 4rem;
+  margin-top: min(1rem + 10vh, 10rem);
   min-width: 375px;
   h1 {
     font-size: $base-font-size * 1.5;
@@ -38,7 +38,7 @@ header {
   padding: 0 1rem;
   min-width: 375px;
   grid-template-columns: repeat(4, minmax(70px, 120px));
-  grid-template-rows: minmax(120px, 200px);
+  grid-template-rows: minmax(70px, 200px);
   gap: 1rem;
   place-items: center stretch;
   place-content: center;
@@ -52,7 +52,7 @@ header {
     font-size: clamp(
       $base-font-size * 3,
       $base-font-size + 5vw,
-      $base-font-size * 3.25
+      $base-font-size * 3.5
     );
     position: relative;
     user-select: none;
@@ -84,6 +84,9 @@ header {
       .content-top {
         position: relative;
         top: 35%;
+        @include breakpoints.ms {
+          top: 28%;
+        }
       }
     }
 
@@ -111,7 +114,10 @@ header {
 
       .content-bottom {
         position: relative;
-        top: -66%;
+        top: -67%;
+        @include breakpoints.ms {
+          top: -74%;
+        }
       }
     }
   }
@@ -133,9 +139,12 @@ footer {
   bottom: 0;
 
   @include breakpoints.ms {
-    height: 300px;
+    height: 260px;
   }
-
+  @include breakpoints.portrait {
+    position: static;
+    margin-top: 4rem;
+  }
   .container {
     padding-top: 4rem;
     gap: 2rem;
