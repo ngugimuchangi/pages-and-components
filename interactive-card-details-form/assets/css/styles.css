@@ -16,12 +16,9 @@ body {
   min-width: 375px;
   font: 500 18px/24px 'Space Grotesk', sans-serif;
   letter-spacing: 0.025rem;
-  /* background-color: #121212; */
-  /* color: white; */
 }
 
 main {
-  width: 100vw;
   min-width: 375px;
   display: flex;
   flex-flow: column nowrap;
@@ -61,7 +58,7 @@ section.cards {
   z-index: 1;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: 1fr 2fr repeat(2, 1fr);
   grid-template-areas:
     'logo . . .'
     '. . . .'
@@ -211,10 +208,11 @@ button {
   background-color: var(--very-dark-violet);
 }
 #complete-section {
-  width: calc(100% - 2em);
+  width: 100%;
   text-align: center;
   position: absolute;
-  top: 30%;
+  top: 0;
+  left: 0;
 }
 #complete-section img {
   margin-bottom: 3rem;
@@ -227,6 +225,7 @@ button {
   margin-bottom: 3rem;
   color: var(--dark-grayish-violet);
 }
+
 /* Medium sized screens*/
 @media screen and (min-width: 768px) {
   /* Cards */

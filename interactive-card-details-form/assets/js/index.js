@@ -32,14 +32,15 @@ window.addEventListener('DOMContentLoaded', () => {
    * @param {Event} event - click event
    */
   function toggleForm(event) {
+    event.preventDefault();
     const formMainSection = document.getElementById('main-form-section');
     const completeSection = document.getElementById('complete-section');
     if (event.target.id === 'continue') {
-      cardHolder.innerText = cardHolder.attributes.default.value;
-      cardNumber.innerText = cardNumber.attributes.default.value;
-      expMonth.innerText = expMonth.attributes.default.value;
-      expYear.innerText = expYear.attributes.default.value;
-      cvc.innerText = cvc.attributes.default.value;
+      cardHolder.innerText = cardHolder.attributes.data.value;
+      cardNumber.innerText = cardNumber.attributes.data.value;
+      expMonth.innerText = expMonth.attributes.data.value;
+      expYear.innerText = expYear.attributes.data.value;
+      cvc.innerText = cvc.attributes.data.value;
     }
     formMainSection.classList.toggle('hide');
     completeSection.classList.toggle('hide');
@@ -55,9 +56,9 @@ window.addEventListener('DOMContentLoaded', () => {
   function fillCard(input, detail, key, max) {
     const { name } = input;
     let { value } = input;
-    const isAlphaNumeric = /^(\w| )$/;
+    const isAlphanumeric = /^(\w| )$/;
 
-    if (isAlphaNumeric.test(key) && value.length !== max) {
+    if (isAlphanumeric.test(key) && value.length !== max) {
       if (
         name === 'card-number'
         && !(value.replace(/\s/g, '').length % 4)
@@ -71,7 +72,7 @@ window.addEventListener('DOMContentLoaded', () => {
       input.value = input.value.slice(0, input.value.length - 1);
       value = input.value;
     }
-    if (!value) detail.innerHTML = detail.attributes.default.value;
+    if (!value) detail.innerHTML = detail.attributes.data.value;
     else if (name === 'exp-month') detail.innerText = value.padStart(2, '0');
     else detail.innerText = value.toUpperCase();
   }
@@ -90,9 +91,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const { name } = this;
     const { key } = event;
-    const isAlphaNumeric = /^(\w| )$/;
+    const isAlphanumeric = /^(\w| )$/;
 
-    if (!isAlphaNumeric.test(key) && key !== 'Backspace') return;
+    if (!isAlphanumeric.test(key) && key !== 'Backspace') return;
     event.preventDefault();
     switch (name) {
       case 'cardholder':
