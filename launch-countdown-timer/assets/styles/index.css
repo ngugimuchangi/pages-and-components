@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+/* reset styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 14px;
+  background: hsl(235, 16%, 14%) url(../images/bg-stars.svg) no-repeat center;
+  background-size: cover;
+  color: hsl(0, 0%, 100%);
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+header {
+  margin-top: 10rem;
+}
+header h1 {
+  font-size: 21px;
+  padding: 2rem;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+
+.unit-wrapper .unit .time-bottom::after, .unit-wrapper .unit .time-bottom::before, .unit-wrapper .unit .time-top::after, .unit-wrapper .unit .time-top::before {
+  content: "";
+  position: absolute;
+  height: 6px;
+  width: 6px;
+  background-color: hsl(235, 16%, 14%);
+}
+
+.countdown {
+  display: grid;
+  padding: 0 1rem;
+  grid-template-columns: repeat(4, minmax(70px, 120px));
+  gap: 1rem;
+  place-items: center stretch;
+  place-content: center;
+}
+
+.unit-wrapper {
+  text-align: center;
+}
+.unit-wrapper .unit {
+  height: 100px;
+  color: hsl(345, 95%, 68%);
+  font-size: 42px;
+  position: relative;
+  user-select: none;
+}
+.unit-wrapper .unit .time-top,
+.unit-wrapper .unit .time-bottom {
+  height: 45%;
+  position: relative;
+  background-color: hsl(236, 21%, 26%);
+}
+.unit-wrapper .unit .time-top {
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+.unit-wrapper .unit .time-top::before {
+  left: 0;
+  bottom: 0;
+  border-top-right-radius: 100%;
+}
+.unit-wrapper .unit .time-top::after {
+  right: 0;
+  bottom: 0;
+  border-top-left-radius: 100%;
+}
+.unit-wrapper .unit .time-top .content-top {
+  --time: "00";
+  position: relative;
+  top: 35%;
+}
+.unit-wrapper .unit .time-bottom {
+  margin-top: 1px;
+  overflow: hidden;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  box-shadow: 0 0.5rem hsl(234, 17%, 12%);
+}
+.unit-wrapper .unit .time-bottom::before {
+  left: 0;
+  top: 0;
+  border-bottom-right-radius: 100%;
+}
+.unit-wrapper .unit .time-bottom::after {
+  right: 0;
+  top: 0;
+  border-bottom-left-radius: 100%;
+}
+.unit-wrapper .unit .time-bottom .content-bottom {
+  position: relative;
+  top: -66%;
+}
+.unit-wrapper .time-label {
+  color: hsl(237, 18%, 59%);
+  font-size: 10.5px;
+  letter-spacing: 0.2rem;
+}
+
+footer {
+  height: 197px;
+  width: 100%;
+  background: url(../images/pattern-hills.svg) no-repeat 78% bottom;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+}
+footer .container {
+  padding-top: 4rem;
+  gap: 2rem;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  background-color: hsl(237, 18%, 59%);
+  mask-size: cover;
+}
+.icon:hover {
+  background-color: hsl(345, 95%, 68%);
+}
+
+.icon-fb {
+  mask: url(../images/icon-facebook.svg);
+}
+
+.icon-pintrest {
+  mask: url(../images/icon-pinterest.svg);
+}
+
+.icon-instagram {
+  mask: url(../images/icon-instagram.svg);
+}
+
+/*# sourceMappingURL=index.css.map */

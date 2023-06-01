@@ -1,0 +1,152 @@
+@use 'sass:map';
+@use 'variables' as *;
+
+// LAYOUTS
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+// HEADER
+header {
+  margin-top: 10rem;
+  h1 {
+    font-size: $base-font-size * 1.5;
+    padding: 2rem;
+    letter-spacing: 0.2rem;
+    text-align: center;
+  }
+}
+
+// COUNTDOWN
+// pseudo-classes round-border
+%after-before {
+  content: '';
+  position: absolute;
+  height: 6px;
+  width: 6px;
+  background-color: map.get($colors, 'very-dark-blue');
+}
+.countdown {
+  display: grid;
+  padding: 0 1rem;
+  grid-template-columns: repeat(4, minmax(70px, 120px));
+  gap: 1rem;
+  place-items: center stretch;
+  place-content: center;
+}
+
+.unit-wrapper {
+  text-align: center;
+  .unit {
+    height: 100px;
+    color: map.get($colors, 'soft-red');
+    font-size: $base-font-size * 3;
+    position: relative;
+    user-select: none;
+    .time-top,
+    .time-bottom {
+      height: 45%;
+      position: relative;
+      background-color: map.get($colors, 'dark-desaturated-blue');
+    }
+    // top piece of time unit card
+    .time-top {
+      border-top-right-radius: $base-border-radius;
+      border-top-left-radius: $base-border-radius;
+
+      &::before {
+        @extend %after-before;
+        left: 0;
+        bottom: 0;
+        border-top-right-radius: 100%;
+      }
+
+      &::after {
+        @extend %after-before;
+        right: 0;
+        bottom: 0;
+        border-top-left-radius: 100%;
+      }
+
+      .content-top {
+        --time: '00';
+        position: relative;
+        top: 35%;
+      }
+    }
+
+    // bottom piece of time unit card
+    .time-bottom {
+      margin-top: 1px;
+      overflow: hidden;
+      border-bottom-right-radius: $base-border-radius;
+      border-bottom-left-radius: $base-border-radius;
+      box-shadow: 0 0.5rem map.get($colors, 'very-dark-mostly-black-blue');
+
+      &::before {
+        @extend %after-before;
+        left: 0;
+        top: 0;
+        border-bottom-right-radius: 100%;
+      }
+
+      &::after {
+        @extend %after-before;
+        right: 0;
+        top: 0;
+        border-bottom-left-radius: 100%;
+      }
+
+      .content-bottom {
+        position: relative;
+        top: -66%;
+      }
+    }
+  }
+
+  .time-label {
+    color: map.get($colors, 'grayish-blue');
+    font-size: $base-font-size * 0.75;
+    letter-spacing: 0.2rem;
+  }
+}
+
+// FOOTER
+footer {
+  height: 197px;
+  width: 100%;
+  background: url(../images/pattern-hills.svg) no-repeat 78% bottom;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  .container {
+    padding-top: 4rem;
+    gap: 2rem;
+  }
+}
+
+// ICONS
+.icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  background-color: map.get($colors, 'grayish-blue');
+  mask-size: cover;
+  &:hover {
+    background-color: map.get($colors, 'soft-red');
+  }
+}
+.icon-fb {
+  mask: url(../images/icon-facebook.svg);
+}
+
+.icon-pintrest {
+  mask: url(../images/icon-pinterest.svg);
+}
+.icon-instagram {
+  mask: url(../images/icon-instagram.svg);
+}

@@ -1,0 +1,19 @@
+// ### Primary
+$colors: (
+  // primary
+  'grayish-blue': hsl(237, 18%, 59%),
+  'soft-red': hsl(345, 95%, 68%),
+  // neutral
+  'white': hsl(0, 0%, 100%),
+  'dark-desaturated-blue': hsl(236, 21%, 26%),
+  'very-dark-blue': hsl(235, 16%, 14%),
+  'very-dark-mostly-black-blue': hsl(234, 17%, 12%),
+  'icon-default': #8385a9
+);
+
+// typography
+$base-font-size: 14px;
+$font-family: 'Red Hat Text', sans-serif;
+
+// utilities
+$base-border-radius: 4px;

@@ -7,12 +7,82 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./images/favicon-32x32.png"
+      href="assets/images/favicon-32x32.png"
     />
-
-    <title>Frontend Mentor | Launch countdown timer</title>
+    <title>Launch countdown timer</title>
+    <link rel="stylesheet" href="assets/styles/index.css" />
+    <script src="assets/js/index.js" defer></script>
   </head>
   <body>
-    We're launching soon Days Hours Minutes Seconds
+    <header><h1>WE'RE LAUNCHING SOON</h1></header>
+    <main>
+      <div class="countdown">
+        <!-- Days -->
+        <div class="unit-wrapper">
+          <div class="unit">
+            <div class="time-top">
+              <span class="days content-top">14</span>
+            </div>
+            <div class="time-bottom">
+              <span class="days content-bottom" aria-hidden="true">14</span>
+            </div>
+          </div>
+          <span class="time-label"> DAYS</span>
+        </div>
+
+        <!-- Hours -->
+        <div class="unit-wrapper">
+          <div class="unit">
+            <div class="time-top">
+              <span class="hours content-top">00</span>
+            </div>
+            <div class="time-bottom">
+              <span class="hours content-bottom" aria-hidden="true">00</span>
+            </div>
+          </div>
+          <span class="time-label"> HOURS</span>
+        </div>
+
+        <!-- Minutes -->
+        <div class="unit-wrapper">
+          <div class="unit">
+            <div class="time-top">
+              <span class="minutes content-top">00</span>
+            </div>
+            <div class="time-bottom">
+              <span class="minutes content-bottom" aria-hidden="true">00</span>
+            </div>
+          </div>
+          <span class="time-label">MINUTES</span>
+        </div>
+
+        <!-- Seconds -->
+        <div class="unit-wrapper">
+          <div class="unit">
+            <!-- <div class="flip-cover">00</div> -->
+            <div class="time-top">
+              <span class="seconds content-top"> 00</span>
+            </div>
+            <div class="time-bottom">
+              <span class="seconds content-bottom" aria-hidden="true">00</span>
+            </div>
+          </div>
+          <span class="time-label"> SECONDS</span>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <a href="#" title="facebook">
+          <span class="icon icon-fb" aria-hidden="true"></span>
+        </a>
+        <a href="#" title="pintrest">
+          <span class="icon icon-pintrest" aria-hidden="true"></span>
+        </a>
+        <a href="#" title="instagram">
+          <span class="icon icon-instagram" aria-hidden="true"></span>
+        </a>
+      </div>
+    </footer>
   </body>
 </html>
