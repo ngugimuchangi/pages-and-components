@@ -1,5 +1,6 @@
 @use 'sass:map';
 @use 'variables' as *;
+@use 'breakpoints';
 
 // LAYOUTS
 .container {
@@ -12,7 +13,8 @@
 
 // HEADER
 header {
-  margin-top: 10rem;
+  margin-top: 4rem;
+  min-width: 375px;
   h1 {
     font-size: $base-font-size * 1.5;
     padding: 2rem;
@@ -30,10 +32,13 @@ header {
   width: 6px;
   background-color: map.get($colors, 'very-dark-blue');
 }
+
 .countdown {
   display: grid;
   padding: 0 1rem;
+  min-width: 375px;
   grid-template-columns: repeat(4, minmax(70px, 120px));
+  grid-template-rows: minmax(120px, 200px);
   gap: 1rem;
   place-items: center stretch;
   place-content: center;
@@ -44,7 +49,11 @@ header {
   .unit {
     height: 100px;
     color: map.get($colors, 'soft-red');
-    font-size: $base-font-size * 3;
+    font-size: clamp(
+      $base-font-size * 3,
+      $base-font-size + 5vw,
+      $base-font-size * 3.25
+    );
     position: relative;
     user-select: none;
     .time-top,
@@ -73,7 +82,6 @@ header {
       }
 
       .content-top {
-        --time: '00';
         position: relative;
         top: 35%;
       }
@@ -118,11 +126,16 @@ header {
 // FOOTER
 footer {
   height: 197px;
-  width: 100%;
+  width: max(100vw, 375px);
   background: url(../images/pattern-hills.svg) no-repeat 78% bottom;
   background-size: cover;
   position: absolute;
   bottom: 0;
+
+  @include breakpoints.ms {
+    height: 300px;
+  }
+
   .container {
     padding-top: 4rem;
     gap: 2rem;

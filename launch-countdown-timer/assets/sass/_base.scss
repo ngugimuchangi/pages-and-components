@@ -18,7 +18,6 @@ body {
     url(../images/bg-stars.svg) no-repeat center;
   background-size: cover;
   color: map.get(variables.$colors, 'white');
-  //   position: relative;
 }
 
 a {

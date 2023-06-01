@@ -30,7 +30,8 @@ a {
 }
 
 header {
-  margin-top: 10rem;
+  margin-top: 4rem;
+  min-width: 375px;
 }
 header h1 {
   font-size: 21px;
@@ -50,7 +51,9 @@ header h1 {
 .countdown {
   display: grid;
   padding: 0 1rem;
+  min-width: 375px;
   grid-template-columns: repeat(4, minmax(70px, 120px));
+  grid-template-rows: minmax(120px, 200px);
   gap: 1rem;
   place-items: center stretch;
   place-content: center;
@@ -62,7 +65,7 @@ header h1 {
 .unit-wrapper .unit {
   height: 100px;
   color: hsl(345, 95%, 68%);
-  font-size: 42px;
+  font-size: clamp(42px, 14px + 5vw, 45.5px);
   position: relative;
   user-select: none;
 }
@@ -87,7 +90,6 @@ header h1 {
   border-top-left-radius: 100%;
 }
 .unit-wrapper .unit .time-top .content-top {
-  --time: "00";
   position: relative;
   top: 35%;
 }
@@ -120,11 +122,16 @@ header h1 {
 
 footer {
   height: 197px;
-  width: 100%;
+  width: max(100vw, 375px);
   background: url(../images/pattern-hills.svg) no-repeat 78% bottom;
   background-size: cover;
   position: absolute;
   bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    height: 300px;
+  }
 }
 footer .container {
   padding-top: 4rem;
