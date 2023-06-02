@@ -32,7 +32,6 @@ window.addEventListener('DOMContentLoaded', () => {
    * @param {Event} event - click event
    */
   function toggleForm(event) {
-    event.preventDefault();
     const formMainSection = document.getElementById('main-form-section');
     const completeSection = document.getElementById('complete-section');
     if (event.target.id === 'continue') {
@@ -188,6 +187,11 @@ window.addEventListener('DOMContentLoaded', () => {
         {
           rule: 'minNumber',
           value: today.getMonth() + 1,
+          errorMessage: cardExpiredError,
+        },
+        {
+          rule: 'maxNumber',
+          value: 12,
           errorMessage: cardExpiredError,
         },
       ],
