@@ -8,4 +8,4 @@ Simple static landing pages using HTML, CSS and Javascript
 - [Age Calculator app](./age-calculator-app/)
 - [Interactive card details form](./interactive-card-details-form/)
 - [Launch countdown timer](./launch-countdown-timer/)
-- [Easybank Landingpage](./easybank-landing-page/)
+[Easybank Landingpage](./easybank-landing-page/)
