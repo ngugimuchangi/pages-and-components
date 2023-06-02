@@ -31,7 +31,7 @@ main {
 }
 
 /* Cards */
-section.cards {
+div.cards {
   height: 240px;
   padding-top: 4rem;
   margin-bottom: 4rem;
@@ -210,9 +210,7 @@ button {
 #complete-section {
   width: 100%;
   text-align: center;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
 }
 #complete-section img {
   margin-bottom: 3rem;
@@ -229,7 +227,7 @@ button {
 /* Medium sized screens*/
 @media screen and (min-width: 768px) {
   /* Cards */
-  section.cards {
+  div.cards {
     margin-bottom: 8rem;
   }
   .card {
@@ -261,10 +259,13 @@ button {
 /* Large screens */
 @media screen and (min-width: 1200px) {
   main {
-    flex-direction: row;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    column-gap: 15rem;
   }
+
   /* Cards  */
-  section.cards {
+  div.cards {
     margin-bottom: 0;
     height: 100vh;
     min-height: 764px;
@@ -292,18 +293,6 @@ button {
   }
   /* Form */
   form {
-    margin-left: 20rem;
-  }
-  #complete-section {
-    top: -12rem;
-  }
-}
-
-@media only screen and (min-width: 1250px) {
-  main {
-    justify-content: stretch;
-  }
-  form {
-    margin-right: auto;
+    margin-right: 20vw;
   }
 }
