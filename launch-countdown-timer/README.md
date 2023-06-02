@@ -27,7 +27,7 @@ Users should be able to:
 #### Medium Size Devices
 ![](images/medium-devices.png)
 
-#### Large
+#### Large Devices
 ![](images/large-devices.png)
 
 </div>
