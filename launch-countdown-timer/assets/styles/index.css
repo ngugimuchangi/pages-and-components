@@ -30,7 +30,8 @@ a {
 }
 
 header {
-  margin-top: min(1rem + 10vh, 10rem);
+  margin-top: min(6rem, 20vw);
+  margin-bottom: min(5rem, 10vw);
   min-width: 375px;
 }
 header h1 {
@@ -52,10 +53,10 @@ header h1 {
   display: grid;
   padding: 0 1rem;
   min-width: 375px;
-  grid-template-columns: repeat(4, minmax(70px, 120px));
-  grid-template-rows: minmax(70px, 200px);
+  grid-template-columns: repeat(4, minmax(80px, 140px));
+  grid-template-rows: 180px;
   gap: 1rem;
-  place-items: center stretch;
+  place-items: stretch;
   place-content: center;
 }
 
@@ -63,15 +64,22 @@ header h1 {
   text-align: center;
 }
 .unit-wrapper .unit {
-  height: 100px;
+  height: 60%;
   color: hsl(345, 95%, 68%);
-  font-size: clamp(42px, 14px + 5vw, 49px);
+  font-size: 51.8px;
   position: relative;
   user-select: none;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 460px) {
+  .unit-wrapper .unit {
+    height: 80%;
+    font-size: 70px;
+  }
 }
 .unit-wrapper .unit .time-top,
 .unit-wrapper .unit .time-bottom {
-  height: 45%;
+  height: 49%;
   position: relative;
   background-color: hsl(236, 21%, 26%);
 }
@@ -91,12 +99,7 @@ header h1 {
 }
 .unit-wrapper .unit .time-top .content-top {
   position: relative;
-  top: 35%;
-}
-@media screen and (min-width: 768px) {
-  .unit-wrapper .unit .time-top .content-top {
-    top: 28%;
-  }
+  top: 34%;
 }
 .unit-wrapper .unit .time-bottom {
   margin-top: 1px;
@@ -117,12 +120,7 @@ header h1 {
 }
 .unit-wrapper .unit .time-bottom .content-bottom {
   position: relative;
-  top: -67%;
-}
-@media screen and (min-width: 768px) {
-  .unit-wrapper .unit .time-bottom .content-bottom {
-    top: -74%;
-  }
+  top: -68%;
 }
 .unit-wrapper .time-label {
   color: hsl(237, 18%, 59%);
@@ -145,7 +143,7 @@ footer {
 }
 @media screen and (max-width: 968px) and (orientation: landscape) {
   footer {
-    position: static;
+    position: relative;
     margin-top: 4rem;
   }
 }
