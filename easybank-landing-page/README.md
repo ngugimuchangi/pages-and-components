@@ -1,4 +1,4 @@
-# Interactive card details form solution
+# Easybank landing page solution
 
 This is a solution to the [Easybank landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/easybank-landing-page-WaUhkoDN).
 
@@ -37,7 +37,7 @@ Users should be able to:
 
 ### Links
 - [Solution URL](https://github.com/ngugimuchangi/frontend_mentors/tree/master/easybank-landing-page)
-- [Demo]()
+- [Demo](https://ngugi-easybank-landing-page.netlify.app/)
 
 ## Built with
 
