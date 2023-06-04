@@ -84,6 +84,7 @@ section {
 }
 @media (min-width: 720px) {
   section {
+    margin-bottom: 10rem;
     text-align: left;
   }
 }
@@ -291,14 +292,14 @@ header .btn.cta {
 }
 @media (min-width: 960px) {
   .bank-features {
-    padding: 5rem 0;
+    padding: 8rem 0;
   }
 }
 .bank-features h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 .bank-features .container > p {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 @media (min-width: 960px) {
   .bank-features .container > p {
@@ -344,9 +345,10 @@ header .btn.cta {
 }
 
 .latest-articles h2 {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 .latest-articles .lt-article {
+  padding: 0;
   text-align: left;
 }
 .latest-articles .lt-article .author {
@@ -354,7 +356,7 @@ header .btn.cta {
   margin-bottom: 0.5rem;
 }
 .latest-articles .lt-article p,
-.latest-articles .lt-article a {
+.latest-articles .lt-article h3 {
   padding-inline: 1rem;
 }
 .latest-articles .lt-article a {

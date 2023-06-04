@@ -104,6 +104,7 @@ section {
   margin-bottom: $base-margin * 4;
   text-align: center;
   @include md {
+    margin-bottom: $base-margin * 10;
     text-align: left;
   }
 }
@@ -252,6 +253,7 @@ header {
   }
 }
 
+// HERO
 .hero {
   margin-bottom: $base-margin * 4;
   .bg-img {
@@ -324,14 +326,14 @@ header {
 .bank-features {
   padding: $base-padding * 5 0;
   @include lg {
-    padding: $base-padding * 5 0;
+    padding: $base-padding * 8 0;
   }
   background-color: map-get($colors, 'light-grayish-blue');
   h2 {
-    margin-bottom: $base-margin;
+    margin-bottom: $base-margin * 2;
   }
   & .container > p {
-    margin-bottom: $base-margin * 2;
+    margin-bottom: $base-margin * 4;
     @include lg {
       width: 66%;
     }
@@ -370,16 +372,18 @@ header {
 // LATEST ARTICLES SECTIONS
 .latest-articles {
   h2 {
-    margin-bottom: $base-margin * 2;
+    margin-bottom: $base-margin * 3;
   }
   .lt-article {
+    padding: 0;
     text-align: left;
     .author {
       font-size: $base-font-size * 0.9;
       margin-bottom: $base-margin * 0.5;
     }
+
     p,
-    a {
+    h3 {
       padding-inline: $base-padding;
     }
     a {
