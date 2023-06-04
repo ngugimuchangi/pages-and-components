@@ -7,6 +7,7 @@
 
 body {
   font: 16px/1.5 "Public Sans", sans-serif;
+  background-color: hsl(0, 0%, 98%);
 }
 
 .container {
@@ -110,12 +111,16 @@ header {
 }
 header .nav-cta {
   height: 80px;
+  min-width: 100vw;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-end;
   align-items: center;
-  background: url(../images/logo.svg) no-repeat left 2.5rem center;
+  background: white url(../images/logo.svg) no-repeat left 2.5rem center;
   background-size: 180px;
+  position: fixed;
+  top: 0;
+  z-index: 2;
 }
 header .header-nav ul {
   height: 280px;
@@ -219,6 +224,7 @@ header .btn.cta {
 }
 
 .hero {
+  margin-top: 80px;
   margin-bottom: 4rem;
 }
 .hero .bg-img {

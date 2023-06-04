@@ -24,6 +24,7 @@ $base-border-radius: 4px;
 }
 body {
   font: #{$base-font-size}/#{$base-line-height} 'Public Sans', sans-serif;
+  background-color: map-get($colors, 'very-light-gray');
 }
 
 // BREAKPOINTS
@@ -135,12 +136,16 @@ header {
   position: relative;
   .nav-cta {
     height: 80px;
+    min-width: 100vw;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
     align-items: center;
-    background: url(../images/logo.svg) no-repeat left 2.5rem center;
+    background: white url(../images/logo.svg) no-repeat left 2.5rem center;
     background-size: 180px;
+    position: fixed;
+    top: 0;
+    z-index: 2;
   }
   .header-nav {
     ul {
@@ -255,6 +260,7 @@ header {
 
 // HERO
 .hero {
+  margin-top: 80px;
   margin-bottom: $base-margin * 4;
   .bg-img {
     overflow: hidden;
