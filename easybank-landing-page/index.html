@@ -6,7 +6,6 @@
     <!-- displays site properly based on user's device -->
 
     <title>Easybank landing page</title>
-    <link rel="stylesheet" href="" />
     <link
       rel="icon"
       type="image/png"
@@ -20,8 +19,14 @@
   <body>
     <header>
       <div class="nav-cta container flex-row">
-        <nav class="header-nav" role="navigation" aria-label="main menu">
-          <button class="hamburger-menu" aria-expanded="false"></button>
+        <nav class="header-nav" aria-label="main menu">
+          <button
+            aria-hidden="false"
+            id="hamburger-menu"
+            class="hamburger-menu"
+            aria-label="Open the menu"
+            aria-expanded="false"
+          ></button>
           <ul class="main-nav flex-column">
             <li><a href="#"> Home </a></li>
             <li><a href="#">About</a></li>
@@ -197,7 +202,7 @@
             <a href="#" class="icon" title="instagram"></a>
           </div>
         </div>
-        <nav class="footer-nav" role="navigation" aria-label="footer menu">
+        <nav class="footer-nav" aria-label="footer menu">
           <ul class="flex-column">
             <li><a href="#" class="text-hover">About</a></li>
             <li><a href="#" class="text-hover">Contact</a></li>

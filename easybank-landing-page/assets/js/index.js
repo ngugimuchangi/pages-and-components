@@ -13,8 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
     hamburgerMenu.classList.toggle('opened');
     menu.classList.toggle('visible');
     menu.classList.toggle('slide-out', !menu.classList.contains('visible'));
-    if (hamburgerMenu.attributes['aria-expanded'].value === 'true') hamburgerMenu.attributes['aria-expanded'].value = 'false';
-    else hamburgerMenu.attributes['aria-expanded'].value = 'true';
+    if (hamburgerMenu.attributes['aria-expanded'].value === 'true') {
+      hamburgerMenu.attributes['aria-expanded'].value = 'false';
+      hamburgerMenu.attributes['aria-label'].value = 'Open the menu';
+    } else {
+      hamburgerMenu.attributes['aria-expanded'].value = 'true';
+      hamburgerMenu.attributes['aria-label'].value = 'Close the menu';
+    }
   }
 
   /**
