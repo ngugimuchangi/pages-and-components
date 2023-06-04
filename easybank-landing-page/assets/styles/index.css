@@ -109,18 +109,21 @@ section {
 header {
   position: relative;
 }
+header .fixed-container {
+  min-width: 100vw;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
 header .nav-cta {
   height: 80px;
-  min-width: 100vw;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-end;
   align-items: center;
-  background: white url(../images/logo.svg) no-repeat left 2.5rem center;
+  background: url(../images/logo.svg) no-repeat left 2.5rem center;
   background-size: 180px;
-  position: fixed;
-  top: 0;
-  z-index: 2;
 }
 header .header-nav ul {
   height: 280px;
