@@ -332,6 +332,9 @@ header {
   h2 {
     margin-bottom: $base-margin * 2;
   }
+  h3 {
+    margin-bottom: $base-margin;
+  }
   & .container > p {
     margin-bottom: $base-margin * 4;
     @include lg {

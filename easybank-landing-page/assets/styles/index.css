@@ -298,6 +298,9 @@ header .btn.cta {
 .bank-features h2 {
   margin-bottom: 2rem;
 }
+.bank-features h3 {
+  margin-bottom: 1rem;
+}
 .bank-features .container > p {
   margin-bottom: 4rem;
 }
