@@ -24,7 +24,12 @@
   <body>
     <main>
       <div id="container" role="group">
-        <form name="age-calculator" action="#" novalidate>
+        <form
+          id="age-calculator-form"
+          name="age-calculator"
+          action="#"
+          novalidate
+        >
           <div class="form-field">
             <label for="day">DAY</label>
             <input
@@ -64,7 +69,7 @@
             />
             <span class="error"></span>
           </div>
-          <div id="submit" role="button"></div>
+          <button id="submit"></button>
         </form>
         <div class="res">
           <div class="res-item">

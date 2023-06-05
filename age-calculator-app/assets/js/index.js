@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   // ELEMENTS
-  const ageCalculatorForm = document.forms['age-calculator'];
+  const ageCalculatorForm = document.getElementById('age-calculator-form');
 
   // FUNCTIONS
   /**
