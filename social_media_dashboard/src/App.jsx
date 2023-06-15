@@ -1,12 +1,9 @@
-// import { useState } from 'react';
 import DashboardHeader from './components/dashboardHeader.jsx';
 import FollowersSection from './components/followers.jsx';
 import OverviewSection from './components/overview.jsx';
 import './assets/sass/index.scss';
 
 export default function App() {
-  // const [theme, setTheme] = useState(localStorage.getItem('theme'));
-
   const facebook = {
     platform: 'facebook',
     username: '@nathanf',

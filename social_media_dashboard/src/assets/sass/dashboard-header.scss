@@ -1,11 +1,9 @@
 @use 'variables';
 @use 'utility' as utils;
 header {
-  border-bottom-left-radius: variables.$base-border-radius * 5;
-  border-bottom-right-radius: variables.$base-border-radius * 5;
   background-color: var(--clr-surface-top-pattern);
   position: relative;
-
+  min-width: 375px;
   &::after {
     content: '';
     height: 8rem;
