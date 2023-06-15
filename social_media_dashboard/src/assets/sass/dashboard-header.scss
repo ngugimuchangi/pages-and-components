@@ -1,0 +1,38 @@
+@use 'variables';
+@use 'utility' as utils;
+header {
+  border-bottom-left-radius: variables.$base-border-radius * 5;
+  border-bottom-right-radius: variables.$base-border-radius * 5;
+  background-color: var(--clr-surface-top-pattern);
+  position: relative;
+
+  &::after {
+    content: '';
+    height: 8rem;
+    border-bottom-left-radius: variables.$base-border-radius * 5;
+    border-bottom-right-radius: variables.$base-border-radius * 5;
+    background-color: var(--clr-surface-top-pattern);
+    position: absolute;
+    bottom: -8rem;
+    inset-inline: 0;
+  }
+
+  .header-container {
+    align-items: flex-start;
+    padding-top: 3rem;
+
+    .header-text {
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--clr-primary-body-text);
+
+      h1 {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+      }
+
+      @include utils.md {
+        border-bottom: none;
+        width: fit-content;
+      }
+    }
+  }
+}

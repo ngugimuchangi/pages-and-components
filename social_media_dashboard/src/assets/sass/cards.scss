@@ -1,0 +1,60 @@
+@use 'variables' as *;
+@use 'utility' as *;
+.card {
+  background-color: var(--clr-card-bg);
+  border-radius: $base-border-radius;
+  padding: 1.5rem 1rem;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--clr-card-bg-hover);
+  }
+}
+
+.followers-card {
+  text-align: center;
+  position: relative;
+
+  @each $platform, $color in $clr-follower-card-border {
+    &.#{$platform}::before {
+      content: '';
+      height: 0.25rem;
+      background: $color;
+      border-top-left-radius: $base-border-radius;
+      border-top-right-radius: $base-border-radius;
+      position: absolute;
+      top: -2px;
+      inset-inline: 0;
+    }
+  }
+
+  .followers__header__username {
+    margin-left: 0.5rem;
+    vertical-align: top;
+  }
+
+  .followers__count {
+    margin-top: 1rem;
+    .followers__count__label {
+      letter-spacing: 0.25rem;
+    }
+  }
+  .trend {
+    margin-top: 1rem;
+  }
+}
+
+.overview-card {
+  .overview-card-stats {
+    margin-top: 1rem;
+    align-items: flex-end;
+  }
+}
+
+.trend {
+  .trend__icon {
+    vertical-align: middle;
+  }
+  .trend__data {
+    margin-left: 0.25rem;
+  }
+}

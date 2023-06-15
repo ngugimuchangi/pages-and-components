@@ -1,0 +1,104 @@
+@use 'variables' as *;
+
+// breakpoints
+@mixin md {
+  @media screen and (min-width: 600px) {
+    @content;
+  }
+}
+@mixin lg {
+  @media screen and (min-width: 960px) {
+    @content;
+  }
+}
+
+// grid
+.container {
+  max-width: 1200px;
+  min-width: 375px;
+  padding-inline: 1rem;
+  margin-inline: auto;
+}
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.col {
+  width: 100%;
+  @include md {
+    width: calc(50% - 1rem);
+  }
+  @include lg {
+    width: calc(25% - 1rem);
+  }
+}
+
+// font weight
+.fw-400 {
+  font-weight: 400;
+}
+.fw-700 {
+  font-weight: 700;
+}
+
+// font size{
+.fs-sm {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.fs-md {
+  font-size: 1.5rem;
+  line-height: 1.1;
+}
+
+.fs-lg {
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.fs-xl {
+  font-size: 3rem;
+  line-height: 1.1;
+}
+
+// text color
+.text-white {
+  color: $clr-white;
+}
+.text-primary-clr {
+  color: var(--clr-primary-body-text);
+}
+.text-secondary-clr {
+  color: var(--clr-secondary-body-text);
+}
+
+.text-red {
+  color: map-get($clr-accent, 'bright-red');
+}
+.text-green {
+  color: map-get($clr-accent, 'lime-green');
+}
+
+// themes
+.light {
+  --clr-surface: #{$clr-white};
+  --clr-surface-top-pattern: #{map-get($clr-light-theme, 'surface-pattern')};
+  --clr-card-bg: #{map-get($clr-light-theme, 'card-bg')};
+  --clr-card-bg-hover: #{darken(map-get($clr-light-theme, 'card-bg'), 5)};
+  --clr-primary-body-text: #{map-get($clr-light-theme, 'text-gray')};
+  --clr-secondary-body-text: #{map-get($clr-light-theme, 'text-dark-blue')};
+  --clr-toggle: #{map-get($clr-toggle, 'toggle-light')};
+}
+
+.dark {
+  --clr-surface: #{map-get($clr-dark-theme, 'surface-dark')};
+  --clr-surface-top-pattern: #{map-get($clr-dark-theme, 'surface-pattern-dark')};
+  --clr-card-bg: #{map-get($clr-dark-theme, 'card-bg-dark')};
+  --clr-card-bg-hover: #{lighten(map-get($clr-dark-theme, 'card-bg-dark'), 5)};
+  --clr-primary-body-text: #{map-get($clr-dark-theme, 'text-dark')};
+  --clr-secondary-body-text: #{$clr-white};
+  --clr-toggle: #{map-get($clr-toggle, 'toggle-dark')};
+}

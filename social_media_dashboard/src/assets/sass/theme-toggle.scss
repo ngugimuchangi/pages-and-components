@@ -1,0 +1,29 @@
+@use 'variables' as *;
+@use 'utility' as utils;
+.theme-toggle {
+  width: 100%;
+
+  .theme-toggle__container {
+    width: 2.5rem;
+    height: 1.25rem;
+    padding: 0.125rem 2px;
+    border-radius: $base-border-radius * 3;
+    background: var(--clr-toggle);
+    cursor: pointer;
+  }
+
+  .theme-toggle__slider {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: $clr-white;
+    transition: transform 0.2s ease-in-out;
+    &.toggle-dark {
+      transform: translateX(calc(1.5rem - 4px));
+    }
+  }
+
+  @include utils.md {
+    width: fit-content;
+  }
+}

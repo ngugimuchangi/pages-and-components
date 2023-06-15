@@ -1,0 +1,50 @@
+@use 'variables' as *;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: inherit;
+}
+
+:root {
+  //   color-scheme: light dark;
+  --clr-surface: #{$clr-white};
+  --clr-surface-top-pattern: #{map-get($clr-light-theme, 'surface-pattern')};
+  --clr-card-bg: #{map-get($clr-light-theme, 'card-bg')};
+  --clr-card-bg-hover: #{darken(map-get($clr-light-theme, 'card-bg'), 5)};
+  --clr-primary-body-text: #{map-get($clr-light-theme, 'text-gray')};
+  --clr-secondary-body-text: #{map-get($clr-light-theme, 'text-dark-blue')};
+  --clr-toggle: #{map-get($clr-toggle, 'toggle-light')};
+
+  //   @media (prefers-color-scheme: dark) {
+  //     --clr-surface: #{map-get($clr-dark-theme, 'surface-dark')};
+  //     --clr-surface-top-pattern: #{map-get(
+  //         $clr-dark-theme,
+  //         'surface-pattern-dark'
+  //       )};
+  //     --clr-card-bg: #{map-get($clr-dark-theme, 'card-bg-dark')};
+  //     --clr-card-bg-hover: #{lighten(map-get($clr-dark-theme, 'card-bg-dark'), 5)};
+  //     --clr-primary-body-text: #{map-get($clr-dark-theme, 'text-dark')};
+  //     --clr-secondary-body-text: $clr-$white;
+  //     --clr-toggle: #{map-get($clr-toggle, 'toggle-dark')};
+  //   }
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  background-color: var(--clr-surface);
+}
+
+#page-wrapper {
+  min-height: 100vh;
+}
+section {
+  margin-block: 3rem;
+}
+h2 {
+  margin-bottom: 1rem;
+}
