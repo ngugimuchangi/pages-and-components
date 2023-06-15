@@ -7,7 +7,7 @@ export default function PlatformIcon({ platform, size }) {
   };
   const { width, height } = size;
   return (
-    <img src={`assets/images/${platformIcons[platform]}`}
+    <img src={`src/assets/images/${platformIcons[platform]}`}
       alt={`${platform} icon`}
       width={width}
       height={height}

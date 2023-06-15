@@ -10,7 +10,7 @@ export default function PlatformPerformance({ data, dataFormat }) {
         {data > 0
           ? <>
               <img className='trend__icon'
-                src={`assets/images/${performanceIcons.up}`}
+                src={`src/assets/images/${performanceIcons.up}`}
                 alt={`${performanceIcons.up} arrow`}></img>
               <span className='trend__data text-green fs-sm fw-700'>
                 {`${formatData(data)}${dataFormat}`}
@@ -18,7 +18,7 @@ export default function PlatformPerformance({ data, dataFormat }) {
             </>
           : <>
               <img className='trend__icon'
-                src={`assets/images/${performanceIcons.down}`}
+                src={`src/assets/images/${performanceIcons.down}`}
                 alt={`${performanceIcons.up} arrow`}></img>
               <span className='trend__data text-red fs-sm fw-700'>
                 {`${formatData(data)}${dataFormat}`}
