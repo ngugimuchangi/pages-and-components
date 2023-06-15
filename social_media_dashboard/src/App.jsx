@@ -51,8 +51,10 @@ export default function App() {
   return (
     <>
       <DashboardHeader totalFollowers='23,004'/>
-      <FollowersSection platforms={[facebook, twitter, instagram, youtube]}/>
-      <OverviewSection platforms={[facebook, twitter, instagram, youtube]}/>
+      <main>
+        <FollowersSection platforms={[facebook, twitter, instagram, youtube]}/>
+        <OverviewSection platforms={[facebook, twitter, instagram, youtube]}/>
+      </main>
     </>
 
   );

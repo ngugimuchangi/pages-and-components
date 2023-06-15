@@ -30,13 +30,13 @@ export default function OverviewSection({ platforms }) {
   });
 
   return (
-    <section className='overview-section'>
+    <div className='overview-section'>
       <div className='container'>
         <h2 className=' overview-title text-primary-clr fs-md fw-700 '>Overview - Today</h2>
         <div className='cards-container flex-row'>
           { overviewCards }
         </div>
       </div>
-    </section>
+    </div>
   );
 }
