@@ -16,19 +16,6 @@
   --clr-primary-body-text: #{map-get($clr-light-theme, 'text-gray')};
   --clr-secondary-body-text: #{map-get($clr-light-theme, 'text-dark-blue')};
   --clr-toggle: #{map-get($clr-toggle, 'toggle-light')};
-
-  //   @media (prefers-color-scheme: dark) {
-  //     --clr-surface: #{map-get($clr-dark-theme, 'surface-dark')};
-  //     --clr-surface-top-pattern: #{map-get(
-  //         $clr-dark-theme,
-  //         'surface-pattern-dark'
-  //       )};
-  //     --clr-card-bg: #{map-get($clr-dark-theme, 'card-bg-dark')};
-  //     --clr-card-bg-hover: #{lighten(map-get($clr-dark-theme, 'card-bg-dark'), 5)};
-  //     --clr-primary-body-text: #{map-get($clr-dark-theme, 'text-dark')};
-  //     --clr-secondary-body-text: $clr-$white;
-  //     --clr-toggle: #{map-get($clr-toggle, 'toggle-dark')};
-  //   }
 }
 
 body {
