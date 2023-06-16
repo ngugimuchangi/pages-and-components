@@ -22,20 +22,22 @@ Users should be able to:
 <div align="center">
 
 #### Small Devices
-![](screenshots/small-devices.png)
+![](screenshots/small-devices-light.png)
 ![](screenshots/small-devices-dark.png)
 
 #### Medium Size Devices
-![](screenshots/medium-devices.png)
+![](screenshots/medium-devices-light.png)
+![](screenshots/medium-devices-dark.png)
 
 #### Large Devices
-![](screenshots/large-devices.png)
+![](screenshots/large-devices-light.png)
+![](screenshots/large-devices-dark.png)
 
 </div>
 
 ### Links
-- [Solution URL](https://github.com/ngugimuchangi/front-end/tree/master/launch-countdown-timer)
-- [Demo](https://launch-countdown-timer-opal.vercel.app/)
+- [Solution URL](https://github.com/ngugimuchangi/frontend_mentors/tree/master/social_media_dashboard)
+- [Demo](https://ngugi-social-media-dashboard.netlify.app/)
 
 ## Built with
 - ReactJs
