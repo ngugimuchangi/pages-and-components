@@ -1,25 +1,21 @@
 import { useEffect, useState } from 'react';
-import '../assets/sass/theme-toggle.scss';
+import '../assets/styles/theme-toggle.scss';
 
 export default function ThemeToggle() {
   const userTheme = JSON.parse(localStorage.getItem('darkTheme'));
   const [darkTheme, setDarkTheme] = useState(userTheme);
 
   useEffect(() => {
-    const { body } = document;
+    const page = document.getElementById('page-wrapper');
     const toggleSlider = document.querySelector('.theme-toggle__slider');
-    // const colorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
     if (darkTheme === false) {
-      body.classList.add('light');
-      body.classList.remove('dark');
-      toggleSlider.classList.add('toggle-light');
-      toggleSlider.classList.remove('toggle-dark');
+      page.classList.toggle('dark', false);
+      toggleSlider.classList.remove('toggle-dark', false);
     }
     if (darkTheme === true) {
-      body.classList.add('dark');
-      body.classList.remove('light');
-      toggleSlider.classList.add('toggle-dark');
-      toggleSlider.classList.remove('toggle-light');
+      page.classList.toggle('dark', true);
+      toggleSlider.classList.toggle('toggle-dark', true);
     }
   }, [darkTheme]);
 
