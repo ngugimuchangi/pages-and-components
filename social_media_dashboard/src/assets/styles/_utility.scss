@@ -83,16 +83,6 @@
 }
 
 // themes
-.light {
-  --clr-surface: #{$clr-white};
-  --clr-surface-top-pattern: #{map-get($clr-light-theme, 'surface-pattern')};
-  --clr-card-bg: #{map-get($clr-light-theme, 'card-bg')};
-  --clr-card-bg-hover: #{darken(map-get($clr-light-theme, 'card-bg'), 5)};
-  --clr-primary-body-text: #{map-get($clr-light-theme, 'text-gray')};
-  --clr-secondary-body-text: #{map-get($clr-light-theme, 'text-dark-blue')};
-  --clr-toggle: #{map-get($clr-toggle, 'toggle-light')};
-}
-
 .dark {
   --clr-surface: #{map-get($clr-dark-theme, 'surface-dark')};
   --clr-surface-top-pattern: #{map-get($clr-dark-theme, 'surface-pattern-dark')};

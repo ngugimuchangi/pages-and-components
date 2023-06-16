@@ -27,16 +27,19 @@
   text-align: center;
   position: relative;
 
+  &::before {
+    content: '';
+    height: 0.25rem;
+    border-top-left-radius: $base-border-radius;
+    border-top-right-radius: $base-border-radius;
+    position: absolute;
+    top: -2px;
+    inset-inline: 0;
+  }
+
   @each $platform, $color in $clr-follower-card-border {
     &.#{$platform}::before {
-      content: '';
-      height: 0.25rem;
       background: $color;
-      border-top-left-radius: $base-border-radius;
-      border-top-right-radius: $base-border-radius;
-      position: absolute;
-      top: -2px;
-      inset-inline: 0;
     }
   }
 
