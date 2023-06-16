@@ -1,25 +1,23 @@
 import formatData from '../utils/formatData';
+import upIcon from '../assets/images/icon-up.svg';
+import downIcon from '../assets/images/icon-down.svg';
 
 export default function PlatformPerformance({ data, dataFormat }) {
-  const performanceIcons = {
-    up: 'icon-up.svg',
-    down: 'icon-down.svg',
-  };
   return (
     <div className='trend'>
         {data > 0
           ? <>
               <img className='trend__icon'
-                src={`src/assets/images/${performanceIcons.up}`}
-                alt={`${performanceIcons.up} arrow`}></img>
+                src={upIcon}
+                alt='up arrow'></img>
               <span className='trend__data text-green fs-sm fw-700'>
                 {`${formatData(data)}${dataFormat}`}
               </span>
             </>
           : <>
               <img className='trend__icon'
-                src={`src/assets/images/${performanceIcons.down}`}
-                alt={`${performanceIcons.up} arrow`}></img>
+                src={downIcon}
+                alt='down arrow'></img>
               <span className='trend__data text-red fs-sm fw-700'>
                 {`${formatData(data)}${dataFormat}`}
               </span>
