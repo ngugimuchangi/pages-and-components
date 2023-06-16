@@ -1,8 +1,11 @@
 import OverviewCard from './overviewCard.jsx';
 
 export default function OverviewSection({ platforms }) {
+  const platformCopy = platforms.slice();
+  const switchPlatforms = platformCopy.splice(1, 2);
+  platformCopy.splice(1, 0, switchPlatforms[1], switchPlatforms[0]);
   const overviewCards = [];
-  platforms.forEach((userDetails) => {
+  platformCopy.forEach((userDetails) => {
     const { platform } = userDetails;
     const { viewsOrRetweets, viewsOrRetweetsPerformance } = userDetails;
     const { Likes, LikesPerformance } = userDetails;

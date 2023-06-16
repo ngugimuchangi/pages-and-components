@@ -1,5 +1,5 @@
 import ThemeToggle from './themeToggle.jsx';
-import '../assets/sass/dashboard-header.scss';
+import '../assets/styles/dashboard-header.scss';
 
 export default function DashboardHeader({ totalFollowers }) {
   return (

@@ -1,7 +1,7 @@
 import PlatformIcon from './platformIcon.jsx';
 import PlatformPerformance from './platformPerformance.jsx';
 import formatData from '../utils/formatData';
-import '../assets/sass/cards.scss';
+import '../assets/styles/cards.scss';
 
 export default function FollowersCard({ userDetails }) {
   const {
