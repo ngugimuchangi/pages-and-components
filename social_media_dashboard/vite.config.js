@@ -1,18 +1,26 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  build: {
+    rollupOptions: {
+      output: {
+        assetFileNames: (assetInfo) => {
+          let extType = assetInfo.name.split('.').at(1);
+          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
+            extType = 'images';
+          }
+          return `assets/${extType}/[name]-[hash][extname]`;
+        },
+
+        chunkFileNames: 'assets/js/[name]-[hash].js',
+
+        entryFileNames: 'assets/js/[name]-[hash].js',
+      },
+    },
+  },
   plugins: [
     react(),
-    viteStaticCopy({
-      targets: [
-        {
-          src: 'src/assets/images',
-          dest: 'assets',
-        },
-      ],
-    }),
   ],
 });
