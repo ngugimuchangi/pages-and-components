@@ -1,7 +1,7 @@
 import DashboardHeader from './components/dashboardHeader.jsx';
 import FollowersSection from './components/followers.jsx';
 import OverviewSection from './components/overview.jsx';
-import './assets/sass/index.scss';
+import './assets/styles/index.scss';
 
 export default function App() {
   const facebook = {
