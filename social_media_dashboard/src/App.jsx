@@ -9,14 +9,14 @@ import data from '../data/data';
 export default function App() {
   const [theme, setTheme] = useState(localStorage.getItem('theme'));
   const {
-    facebook, instagram, twitter, youtube,
+    total, facebook, instagram, twitter, youtube,
   } = data;
 
   return (
     <ThemeContext.Provider value={theme ?? 'light'}>
     <ThemeSetterContext.Provider value={(newTheme) => setTheme(newTheme)}>
       <div className={`app ${theme === 'dark' && 'dark'}`}>
-        <DashboardHeader totalFollowers='23,004'/>
+        <DashboardHeader totalFollowers={total.toLocaleString('en-US')}/>
         <main>
           <FollowersSection platforms={[facebook, twitter, instagram, youtube]}/>
           <OverviewSection platforms={[facebook, twitter, instagram, youtube]}/>
