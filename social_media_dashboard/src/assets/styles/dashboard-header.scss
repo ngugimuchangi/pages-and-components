@@ -21,7 +21,7 @@ header {
 
     .header-text {
       padding-bottom: 1rem;
-      border-bottom: 1px solid var(--clr-primary-body-text);
+      border-bottom: 1.5px solid map-get(variables.$clr-dark-theme, 'text-dark');
 
       h1 {
         font-size: clamp(1.5rem, 5vw, 2rem);
