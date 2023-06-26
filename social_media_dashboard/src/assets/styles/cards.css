@@ -1,0 +1,155 @@
+.container {
+  max-width: 1200px;
+  min-width: 375px;
+  padding-inline: 1rem;
+  margin-inline: auto;
+}
+
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.col {
+  width: 100%;
+}
+@media screen and (min-width: 600px) {
+  .col {
+    width: calc(50% - 1rem);
+  }
+}
+@media screen and (min-width: 960px) {
+  .col {
+    width: calc(25% - 1rem);
+  }
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fs-sm {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.fs-md {
+  font-size: 1.5rem;
+  line-height: 1.1;
+}
+
+.fs-lg {
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.fs-xl {
+  font-size: 3rem;
+  line-height: 1.1;
+}
+
+.text-white {
+  color: hsl(0, 0%, 100%);
+}
+
+.text-primary-clr {
+  color: var(--clr-primary-body-text);
+}
+
+.text-secondary-clr {
+  color: var(--clr-secondary-body-text);
+}
+
+.text-red {
+  color: hsl(356, 69%, 56%);
+}
+
+.text-green {
+  color: hsl(163, 72%, 41%);
+}
+
+.dark {
+  --clr-surface: hsl(230, 17%, 14%);
+  --clr-surface-top-pattern: hsl(232, 19%, 15%);
+  --clr-card-bg: hsl(228, 28%, 20%);
+  --clr-card-bg-hover: #2e3552;
+  --clr-primary-body-text: hsl(228, 34%, 66%);
+  --clr-secondary-body-text: hsl(0, 0%, 100%);
+  --clr-toggle: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+.card {
+  background-color: var(--clr-card-bg);
+  border-radius: 4px;
+  padding: 1.5rem 1rem;
+  cursor: pointer;
+}
+.card:hover {
+  background-color: var(--clr-card-bg-hover);
+}
+
+.followers-section,
+.overview-section {
+  padding-block: 3rem;
+}
+
+.overview-section h2 {
+  margin-bottom: 1rem;
+}
+
+.followers-card {
+  text-align: center;
+  position: relative;
+}
+.followers-card::before {
+  content: "";
+  height: 0.25rem;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  position: absolute;
+  top: -2px;
+  inset-inline: 0;
+}
+.followers-card.facebook::before {
+  background: hsl(208, 92%, 53%);
+}
+.followers-card.twitter::before {
+  background: hsl(203, 89%, 53%);
+}
+.followers-card.instagram::before {
+  background: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+}
+.followers-card.youtube::before {
+  background: hsl(348, 97%, 39%);
+}
+.followers-card .followers__header__username {
+  margin-left: 0.5rem;
+  vertical-align: top;
+}
+.followers-card .followers__count {
+  margin-top: 1rem;
+}
+.followers-card .followers__count .followers__count__label {
+  letter-spacing: 0.25rem;
+}
+.followers-card .trend {
+  margin-top: 1rem;
+}
+
+.overview-card .overview-card-stats {
+  margin-top: 1rem;
+  align-items: flex-end;
+}
+
+.trend .trend__icon {
+  vertical-align: middle;
+}
+.trend .trend__data {
+  margin-left: 0.25rem;
+}/*# sourceMappingURL=cards.css.map */
