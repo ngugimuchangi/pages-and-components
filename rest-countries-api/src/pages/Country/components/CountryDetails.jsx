@@ -9,6 +9,7 @@ import BorderCountries from '../../../components/ui/BorderCountries.jsx';
  */
 export default function CountryDetails() {
   const country = useAsyncValue();
+
   useEffect(() => {
     document.title = `Where in the world | ${country.name}`;
   }, [country.name]);

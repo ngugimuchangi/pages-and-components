@@ -9,7 +9,7 @@ function Header() {
         <Container>
           <div className='flex flex-row justify-space-between align-center'>
             <Link>
-              <h1 className='header__title text-body fs-lg fw-900'>Where in the world</h1>
+              <h1 className='header__title text-body fs-lg fw-900'>Where in the world?</h1>
             </Link>
             <ThemeToggle />
           </div>
