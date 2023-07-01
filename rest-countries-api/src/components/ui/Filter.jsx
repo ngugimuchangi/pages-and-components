@@ -17,7 +17,7 @@ function Filter() {
       <div className='filter__active-option'
         onClick={() => toggleFilters()}>
         {filter === 'All' ? defaultText : filter}
-        <FontAwesomeIcon icon={faChevronDown} style={{ marginLeft: '0.5rem' }} />
+        <FontAwesomeIcon icon={faChevronDown} style={{ marginLeft: '2rem' }} />
       </div>
       <ul className={`filter__list${filterActive ? ' show' : ''}`}>
         {

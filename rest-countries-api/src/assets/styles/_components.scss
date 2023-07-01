@@ -41,6 +41,7 @@
   .filter__active-option {
     width: 180px;
     padding: $base-padding * 1.5 $base-padding * 3;
+    padding-right: $base-padding;
     margin-bottom: $base-margin;
     border-radius: $base-border-radius;
     box-shadow: $box-shadow;
