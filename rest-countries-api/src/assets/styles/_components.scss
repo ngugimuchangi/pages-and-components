@@ -262,10 +262,9 @@
 }
 
 // Error element
-.wrapper {
-  & > .error-wrapper {
-    margin-top: 10rem;
-  }
+.wrapper .error-wrapper,
+.header + .error-wrapper {
+  margin-top: 10rem;
 }
 
 .error-wrapper {

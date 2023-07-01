@@ -9,7 +9,7 @@ import ErrorMessage from '../components/ui/ErrorMessage.jsx';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Header />}>
-      <Route element={<Main />} >
+      <Route element={<Main />} errorElement={<ErrorMessage />}>
         <Route path='*' element={<ErrorMessage message={'Page not found'} />} />
         <Route index element={<Home />} loader={homeLoader} />
         <Route path='countries/:alpha' element={<Country />} loader={countryLoader} />

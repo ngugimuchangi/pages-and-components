@@ -10,7 +10,7 @@ export default function BorderCountries({ borderCountries }) {
             borderCountries.length
               ? borderCountries.map((country, index) => (
                 <Link key={index} to={`/countries/${country.alpha}`}>
-                  <span key={index} className='border-country fs-details text-body'> {country.name}</span>;
+                  <span key={index} className='border-country fs-details text-body'> {country.name}</span>
                 </Link>
 
               ))

@@ -1,4 +1,4 @@
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
 import { Await, defer, useLoaderData } from 'react-router-dom';
 import SearchBar from '../../components/ui/SearchBar.jsx';
 import SearchContextProvider from '../../contexts/searchContext.jsx';
@@ -22,6 +22,9 @@ export async function loader() {
  */
 export default function Home() {
   const { countries } = useLoaderData();
+  useEffect(() => {
+    document.title = 'Where in the world';
+  }, []);
   return (
     <SearchContextProvider>
       <SearchBar />
