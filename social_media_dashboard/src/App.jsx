@@ -14,15 +14,15 @@ export default function App() {
 
   return (
     <ThemeContext.Provider value={theme ?? 'light'}>
-    <ThemeSetterContext.Provider value={(newTheme) => setTheme(newTheme)}>
-      <div className={`app ${theme === 'dark' && 'dark'}`}>
-        <DashboardHeader totalFollowers={total.toLocaleString('en-US')}/>
-        <main>
-          <FollowersSection platforms={[facebook, twitter, instagram, youtube]}/>
-          <OverviewSection platforms={[facebook, twitter, instagram, youtube]}/>
-        </main>
-      </div>
-    </ThemeSetterContext.Provider>
+      <ThemeSetterContext.Provider value={(newTheme) => setTheme(newTheme)}>
+        <div className={`app ${theme === 'dark' && 'dark'}`}>
+          <DashboardHeader totalFollowers={total.toLocaleString('en-US')} />
+          <main>
+            <FollowersSection platforms={[facebook, twitter, instagram, youtube]} />
+            <OverviewSection platforms={[facebook, twitter, instagram, youtube]} />
+          </main>
+        </div>
+      </ThemeSetterContext.Provider>
     </ThemeContext.Provider>
   );
 }
