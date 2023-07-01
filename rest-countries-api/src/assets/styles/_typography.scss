@@ -1,0 +1,54 @@
+@use 'variables' as *;
+
+// text colors
+.text-gray {
+  color: map-get($light-mode-colors, 'text-color');
+}
+.text-white {
+  color: $white;
+}
+
+.text-light-gray {
+  color: map-get($light-mode-colors, 'input-color');
+}
+
+.text-input {
+  color: var(--clr-input);
+}
+
+.text-body {
+  color: var(--clr-text);
+}
+
+// font-weights
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-800 {
+  font-weight: 800;
+}
+
+// font-sizes
+.fs-home {
+  font-size: $home-font-size;
+}
+
+.fs-details {
+  font-size: $details-font-size;
+}
+
+.fs-md {
+  font-size: $home-font-size * 1.25;
+}
+.fs-lg {
+  font-size: clamp($home-font-size * 1.2, 3vw, $home-font-size * 2);
+}
+
+.fs-xl {
+  font-size: clamp($home-font-size * 1.2, 3vw, $home-font-size * 2.5);
+}

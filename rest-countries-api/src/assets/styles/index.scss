@@ -1,0 +1,62 @@
+@use 'variables' as *;
+@use 'typography';
+@use 'components';
+@use 'layout';
+@use 'sections';
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 100%;
+}
+
+:root {
+  --clr-surface: #{map-get($light-mode-colors, 'surface-color')};
+  --clr-card-surface: #{$white};
+  --clr-card-surface-hover: #{darken($white, 5)};
+  --clr-text: #{map-get($light-mode-colors, 'text-color')};
+  --clr-input: #{map-get($light-mode-colors, 'input-color')};
+}
+
+.dark {
+  --clr-surface: #{map-get($dark-mode-colors, 'surface-color')};
+  --clr-card-surface: #{map-get($dark-mode-colors, 'card-color')};
+  --clr-card-surface-hover: #{lighten(
+      map-get($dark-mode-colors, 'card-color'),
+      4
+    )};
+  --clr-text: #{$white};
+  --clr-input: #{$white};
+}
+
+body {
+  font-family: $font-family;
+  font-size: $home-font-size;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.app {
+  min-height: 100vh;
+  background: var(--clr-surface);
+}

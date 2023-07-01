@@ -1,0 +1,55 @@
+@use 'variables' as *;
+body {
+  min-width: 375px;
+}
+.wrapper {
+  min-width: 375px;
+  max-width: 1400px;
+  margin-inline: auto;
+  padding: $base-padding $base-padding * 4;
+}
+
+.flex {
+  display: flex;
+  // gap: 1.25rem;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-colum {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.justify-space-around {
+  justify-content: space-around;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-start {
+  align-items: start;
+}
+
+.col {
+  width: 100%;
+
+  @media (min-width: 600px) {
+    width: calc(50% - 0.7rem);
+  }
+  @media (min-width: 820px) {
+    width: calc(33% - 0.7rem);
+  }
+  @media (min-width: 1200px) {
+    width: calc(25% - 1.9rem);
+  }
+}
