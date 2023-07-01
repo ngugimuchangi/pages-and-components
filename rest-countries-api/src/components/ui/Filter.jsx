@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import FilterOption from './FilterOption.jsx';
 
 function Filter() {
@@ -15,6 +17,7 @@ function Filter() {
       <div className='filter__active-option'
         onClick={() => toggleFilters()}>
         {filter === 'All' ? defaultText : filter}
+        <FontAwesomeIcon icon={faChevronDown} style={{ marginLeft: '0.5rem' }} />
       </div>
       <ul className={`filter__list${filterActive ? ' show' : ''}`}>
         {
