@@ -1,0 +1,176 @@
+/* Resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+:root {
+  /* Primary colors */
+  --nutmeg: hsl(14, 45%, 36%);
+  --dark-raspberry: hsl(332, 51%, 32%);
+
+  /* Neutral colors */
+  --white: hsl(0, 0%, 100%);
+  --rose-white: hsl(330, 100%, 98%);
+  --eggshell: hsl(30, 54%, 90%);
+  --light-grey: hsl(30, 18%, 87%);
+  --wenge-brown: hsl(30, 10%, 34%);
+  --dark-charcoal: hsl(24, 5%, 18%);
+}
+
+/* Typography */
+@font-face {
+  font-family: 'Outfit';
+  src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: 'Young Serif';
+  src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+
+body {
+  font-family: 'Outfit', serif;
+  background-color: var(--eggshell);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--wenge-brown);
+}
+
+/* List styles */
+
+ul,
+ol {
+  padding-left: 1.2rem;
+}
+
+li {
+  padding-left: 1rem;
+  line-height: 2;
+}
+
+li::marker {
+  font-weight: bold;
+  color: var(--nutmeg);
+}
+
+/* Wrapper */
+.wrapper {
+  max-width: 760px;
+  margin: auto;
+  background-color: var(--white);
+}
+.wrapper,
+.recipe-wrapper {
+  display: grid;
+  gap: 2rem;
+}
+
+/* Sections */
+
+section {
+  margin-inline: 2rem;
+}
+
+/* Headings */
+.hero-heading {
+  color: var(--dark-charcoal);
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.prep-summary-heading {
+  color: var(--dark-raspberry);
+  font-size: 1.5rem;
+}
+
+.section-heading {
+  color: var(--nutmeg);
+  font-size: 2rem;
+}
+
+.hero-heading,
+.section-heading {
+  font-weight: 400;
+  font-family: 'Young Serif', serif;
+}
+
+.hero-heading,
+.prep-summary-heading,
+.section-heading {
+  margin-bottom: 0.5rem;
+}
+
+/* Hero */
+.hero-img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.hero-text {
+  padding: 1rem;
+}
+
+/* Recipe Summary */
+.prep-summary {
+  padding: 1.5rem;
+  margin-inline: 2rem;
+  border-radius: 1rem;
+  background-color: var(--rose-white);
+}
+/* Ingredients and Instructions */
+#ingredients,
+#instructions {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--light-grey);
+}
+
+/* Nutrition */
+.table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+tr {
+  display: table-row;
+}
+
+td {
+  padding-left: clamp(1rem, 5vw, 2rem);
+  padding-block: 1rem;
+  border-bottom: 1px solid var(--light-grey);
+}
+
+td:last-child {
+  color: var(--nutmeg);
+}
+
+.table-caption {
+  text-align: left;
+}
+
+/* Media Queries */
+@media (min-width: 760px) {
+  .wrapper {
+    padding: 3rem;
+    margin-block: 4rem;
+    border-radius: 1rem;
+  }
+
+  .hero-img {
+    border-radius: 1rem;
+  }
+
+  section,
+  .prep-summary {
+    margin-inline: 0;
+  }
+
+  .hero-text {
+    padding-inline: 0;
+  }
+}
