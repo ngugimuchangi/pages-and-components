@@ -1,12 +1,6 @@
-# Frontend Projects
+# Overview
 
-Static landing pages using HTML, CSS and Javascript
-
-## Projects
-
-- [Age Calculator app](./age-calculator-app/)
-- [Blogr landing page](./blogr-landing-page/)
-- [Easybank Landingpage](./easybank-landing-page/)
-- [Interactive card details form](./interactive-card-details-form/)
-- [Launch countdown timer](./launch-countdown-timer/)
-- [Social media dashboard](./social_media_dashboard/)
+Various projects from [Frontend Mentor](https://www.frontendmentor.io). The projects are single page
+solutions, including landing pages, marketing pages, dashboards, components, etc. Projects are
+organized into two main directories: `components` and `pages`. Each project has its own directory,
+containing the project files and a `README.md` file with the project details.
