@@ -2,14 +2,32 @@
 
 This is a solution to the
 [Recipe page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/recipe-page-KiTsR8QQKm).
-Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Screenshots
+## Table of contents
 
-<div align="center">
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshots](#screenshots)
+    - [Mobile](#mobile)
+    - [Desktop](#desktop)
 
-![](design/mobile-design.jpg)
+## Overview
 
-![](design/desktop-design.jpg)
+### The challenge
 
-</div>
+The challenge is to build out this recipe page and get it looking as close to the [design](design)
+as possible.
+
+### Screenshots
+
+<center>
+
+#### Mobile
+
+![Mobile view screenshot](screenshots/mobile.png)
+
+#### Desktop
+
+![Desktop view screenshot](screenshots/desktop.png)
+
+</center>
