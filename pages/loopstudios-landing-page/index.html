@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Loopstudios" />
+    <meta
+      name="description"
+      content="Loopstudios is a VR company that has been producing world-class virtual reality projects for some of the best companies around the globe."
+    />
+    <meta
+      name="keywords"
+      content="VR, virtual reality, immersive experiences, digital experiences, brand, world-class, projects, companies, globe, award-winning, creations, businesses, support, products, events, careers, about, loopstudios"
+    />
+    <link rel="stylesheet" href="assets/styles/styles.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png" />
+    <title>Loopstudios | Home</title>
+    <script type="application/javascript" src="assets/scripts/script.js" defer></script>
+  </head>
+  <body class="body text--primary">
+    <!-- Heading - Nav and Hero -->
+    <header class="header">
+      <div class="wrapper header--wrapper">
+        <!-- Header nav and logo -->
+        <div class="header__logo-and-nav">
+          <a href="#">
+            <img
+              class="logo header-logo"
+              src="assets/images/icons/logo.svg"
+              alt="Loopstudios logo"
+              width="192"
+              height="32"
+            />
+          </a>
+          <button class="nav-toggle" aria-controls="nav--primary" aria-expanded="false">
+            <svg fill="white" class="hamburger" viewBox="0 0 100 100" width="50">
+              <rect class="line top" width="80" height="8" x="10" y="25" rx="5"></rect>
+              <rect class="line middle" width="80" height="8" x="10" y="45" rx="5"></rect>
+              <rect class="line bottom" width="80" height="8" x="10" y="65" rx="5"></rect>
+            </svg>
+            <span class="sr-only">Menu</span>
+          </button>
+          <nav #id="nav--primary" class="header__nav text--secondary">
+            <ul class="nav nav--primary">
+              <li class="nav__item">
+                <a href="#" class="nav__item__link link-underline">About</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__item__link link-underline">Careers</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__item__link link-underline">Events</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__item__link link-underline">Products</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__item__link link-underline">Support</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Hero text -->
+        <h1 class="header__content text--secondary">Immersive experiences that deliver</h1>
+      </div>
+    </header>
+
+    <main class="main wrapper">
+      <!-- Intro -->
+      <section class="section section--intro">
+        <picture class="section--intro__image">
+          <source
+            srcset="assets/images/desktop/image-interactive.jpg"
+            media="(min-width: 768px)"
+            width="731"
+            height="500"
+          />
+          <img
+            class="intro-image"
+            alt="Picture of a person wearing VR headset and interacting with the environment in VR"
+            src="assets/images/mobile/image-interactive.jpg"
+            width="654"
+            height="448"
+          />
+        </picture>
+        <div class="section--intro__content">
+          <h2 class="section__title section--intro__content__title text--secondary">
+            The leader in interactive VR
+          </h2>
+          <p class="section--intro__content__text">
+            Founded in 2011, Loopstudios has been producing world-class virtual reality projects for
+            some of the best companies around the globe. Our award-winning creations have
+            transformed businesses through digital experiences that bind to their brand.
+          </p>
+        </div>
+      </section>
+
+      <!-- Gallery -->
+      <section class="section section--gallery">
+        <h1 class="section__title section--gallery__title text--secondary">Our creations</h1>
+        <button class="button section--gallery__see-more" type="button">See all</button>
+        <div class="gallery">
+          <figure class="gallery__entry">
+            <picture class="gallery__entry__image">
+              <source
+                srcset="assets/images/desktop/image-deep-earth.jpg"
+                media="(min-width: 768px)"
+                width="256"
+                height="450"
+              />
+              <img
+                class="gallery-image"
+                src="assets/images/mobile/image-deep-earth.jpg"
+                alt="Picture of Earth's view from outer space"
+                width="645"
+                height="240"
+                loading="lazy"
+              />
+            </picture>
+            <figcaption class="gallery__entry__caption text--secondary">Deep<br />earth</figcaption>
+          </figure>
+
+          <figure class="gallery__entry">
+            <picture class="gallery__entry__image">
+              <source
+                srcset="assets/images/desktop/image-night-arcade.jpg"
+                media="(min-width: 768px)"
+                width="256"
+                height="450"
+              />
+              <img
+                class="gallery-image"
+                src="assets/images/mobile/image-night-arcade.jpg"
+                alt="Picture of a night arcade"
+                width="645"
+                height="240"
+                loading="lazy"
+              />
+            </picture>
+            <figcaption class="gallery__entry__caption text--secondary">
+              Night<br />
+              arcade
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__entry">
+            <picture class="gallery__entry__image">
+              <source
+                srcset="assets/images/desktop/image-soccer-team.jpg"
+                media="(min-width: 768px)"
+                width="256"
+                height="450"
+              />
+              <img
+                class="gallery-image"
+                src="assets/images/mobile/image-soccer-team.jpg"
+                alt="Picture of a person in red soccer uniform playing soccer"
+                width="645"
+                height="240"
+                loading="lazy"
+              />
+            </picture>
+
+            <figcaption class="gallery__entry__caption text--secondary">
+              Soccer<br />
+              team VR
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__entry">
+            <picture class="gallery__entry__image">
+              <source
+                srcset="assets/images/desktop/image-grid.jpg"
+                media="(min-width: 768px)"
+                width="256"
+                height="450"
+              />
+              <img
+                class="gallery-image"
+                src="assets/images/mobile/image-grid.jpg"
+                alt="Picture of side profile of a car with bokeh effect in the background and focusing on the hind car tire"
+                width="645"
+                height="240"
+                loading="lazy"
+              />
+            </picture>
+            <figcaption class="gallery__entry__caption text--secondary">The <br />grid</figcaption>
+          </figure>
+
+          <figure class="gallery__entry">
+            <picture class="gallery__entry__image">
+              <source
+                srcset="assets/images/desktop/image-from-above.jpg"
+                media="(min-width: 768px)"
+                width="256"
+                height="450"
+              />
+              <img
+                class="gallery-image"
+                src="assets/images/mobile/image-from-above.jpg"
+                alt="Picture of winding road and landscape from above"
+                width="645"
+                height="240"
+                loading="lazy"
+              />
+            </picture>
+            <figcaption class="gallery__entry__caption text--secondary">
+              From up <br />
+              above VR
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__entry">
+            <picture class="gallery__entry__image">
+              <source
+                srcset="assets/images/desktop/image-pocket-borealis.jpg"
+                media="(min-width: 768px)"
+                width="256"
+                height="450"
+              />
+              <img
+                class="gallery-image"
+                src="assets/images/mobile/image-pocket-borealis.jpg"
+                alt="Picture of northern lights"
+                width="645"
+                height="240"
+                loading="lazy"
+              />
+            </picture>
+            <figcaption class="gallery__entry__caption text--secondary">
+              Pocket<br />borealis
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__entry">
+            <picture class="gallery__entry__image">
+              <source
+                srcset="assets/images/desktop/image-curiosity.jpg"
+                media="(min-width: 768px)"
+                width="256"
+                height="450"
+              />
+              <img
+                class="gallery-image"
+                src="assets/images/mobile/image-curiosity.jpg"
+                alt="Picture of Mars rover"
+                width="645"
+                height="240"
+                loading="lazy"
+              />
+            </picture>
+            <figcaption class="gallery__entry__caption text--secondary">
+              The<br />
+              curiosity
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__entry">
+            <picture class="gallery__entry__image">
+              <source
+                srcset="assets/images/desktop/image-fisheye.jpg"
+                media="(min-width: 768px)"
+                width="256"
+                height="450"
+              />
+              <img
+                class="gallery-image"
+                src="assets/images/mobile/image-fisheye.jpg"
+                alt="Picture of the sky and environment with fisheye effect"
+                width="645"
+                height="240"
+                loading="lazy"
+              />
+            </picture>
+            <figcaption class="gallery__entry__caption text--secondary">
+              Make <br />
+              it fisheye
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <!-- Footer nav and logo -->
+      <div class="wrapper footer--wrapper">
+        <div class="footer__logo-and-nav">
+          <a href="#">
+            <img
+              class="logo logo-header"
+              src="assets/images/icons/logo.svg"
+              alt="Loopstudios logo"
+              width="192"
+              height="32"
+            />
+          </a>
+          <nav>
+            <ul class="nav nav--secondary">
+              <li class="nav__item">
+                <a href="#" class="nav__item__link link-underline">About</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__item__link link-underline">Careers</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__item__link link-underline">Events</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__item__link link-underline">Products</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__item__link link-underline">Support</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Socials and copyright -->
+        <div class="footer__socials-and-copy">
+          <ul class="socials">
+            <li class="socials__item">
+              <a href="#" class="socials__item__link link-underline">
+                <img src="assets/images/icons/icon-facebook.svg" alt="Facebook" />
+              </a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials__item__link link-underline">
+                <img src="assets/images/icons/icon-twitter.svg" alt="Twitter" />
+              </a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials__item__link link-underline">
+                <img src="assets/images/icons/icon-pinterest.svg" alt="Pinterest" />
+              </a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials__item__link link-underline">
+                <img src="assets/images/icons/icon-instagram.svg" alt="Instagram" />
+              </a>
+            </li>
+          </ul>
+          <p class="copyright">&copy; 2021 Loopstudios. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

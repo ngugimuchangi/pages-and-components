@@ -9,3 +9,4 @@ pages, dashboards, etc.
 2. [Blogr landing page](blogr-landing-page)
 3. [Easybank landing page](easybank-landing-page)
 4. [Social media dashboard](social_media_dashboard)
+5. [Loopstudios landing page](loopstudios-landing-page)
