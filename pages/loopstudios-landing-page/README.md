@@ -30,11 +30,12 @@ Users should be able to:
 
 ### Screenshots
 
-<center>
+<div align="center">
 
 #### Mobile
 
-![Mobile view screenshot](screenshots/mobile.png)
+![Mobile view screenshot](screenshots/mobile-1.png)&emsp;
+![Mobile view screenshot2](screenshots/mobile-2.png)
 
 #### Tablet
 
@@ -44,4 +45,4 @@ Users should be able to:
 
 ![Desktop view screenshot](screenshots/desktop.png)
 
-</center>
+</div>
