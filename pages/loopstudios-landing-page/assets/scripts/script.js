@@ -4,7 +4,7 @@ let resizeTimer;
 
 // Toggles mobile menu
 navToggle.addEventListener('click', () => {
-  const menuOpened = navToggle.getAttribute('aria-expanded') === 'true' || false;
+  const menuOpened = navToggle.getAttribute('aria-expanded') === 'true';
   if (menuOpened) {
     navToggle.setAttribute('aria-expanded', 'false');
   } else {
